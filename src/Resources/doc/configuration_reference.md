@@ -25,9 +25,11 @@ csa_guzzle:
             middleware:       []
             alias:            ~
     mock:
-        enabled:              false
-        storage_path:         ~ # Required
-        mode:                 replay
+        enabled:                    false
+        storage_path:               ~ # Required
+        mode:                       replay
+        request_headers_blacklist:  []
+        response_headers_blacklist: []
 ```
 
 To log request/response body you can use `{req_body}` and `{res_body}` respectively in `format` setting.
